@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restoran Menyusu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+    
+      background: #FFFACD;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #00897B;
+      color: white;
+      padding: 20px;
+      font-size: 2.8rem;
+      text-shadow: 1px 1px 5px #b30000;
+      font-weight: bold;
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .section {
+      margin: 30px auto;
+      width: 90%;
+      max-width: 500px;
+      padding: 0 10px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 1.8rem;
+      color: #ffffff;
+      background: #b30000;
+      box-shadow: 1px 1px 5px rgb(0, 0, 0);
+      padding: 10px 16px;
+      border: 1px solid rgb(234, 255, 0);
+      border-radius: 0px 18px;
+      text-shadow: 1px 1px 5px #b30000;
+      animation: bounceIn 1s ease;
+      font-weight: 900;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .items {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .item {
+      font-size: 1.5rem;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 12px 16px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+    }
+
+    .item:nth-child(1) { animation-delay: 0.3s; }
+    .item:nth-child(2) { animation-delay: 0.5s; }
+    .item:nth-child(3) { animation-delay: 0.7s; }
+
+    @keyframes fadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.5rem;
+        padding: 15px;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+      }
+
+      .item {
+        font-size: 1rem;
+        padding: 10px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>RESTORAN MENYU</header>
+
+  <div class="section">
+    <div class="section-title">Səhər Yeməyi</div>
+    <div class="items">
+      <div class="item"><span>Bal</span> <span>4 AZN</span></div>
+      <div class="item"><span>Qaymaq</span> <span>6 AZN</span></div>
+      <div class="item"><span>Yağ</span> <span>3 AZN</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">İçkilər</div>
+    <div class="items">
+      <div class="item"><span>Çay</span> <span>1 AZN</span></div>
+      <div class="item"><span>Kofe</span> <span>2 AZN</span></div>
+      <div class="item"><span>Mineral Su</span> <span>1.5 AZN</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Desertlər</div>
+    <div class="items">
+      <div class="item"><span>Şəkərbura</span> <span>2 AZN</span></div>
+      <div class="item"><span>Pakhlava</span> <span>2.5 AZN</span></div>
+      <div class="item"><span>Tort</span> <span>3 AZN</span></div>
+    </div>
+  </div>
+
+</body>
+</html>
